@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to Write Away!</h1>
+        <img src="images/blog.png" class="img1" alt="connected colorful rectangles">
+
+
+    </header>
+
+    <h3>The space for when you have something to say and you want to say it right now.</h3>
+
+    <h2>Go Ahead, Say Something!</h2>
+    <form action="/post" method="post">
+        <input type="text" name="title" placeholder="Title">
+        <textarea name="content" placeholder="Content"></textarea>
+        <button type="submit">Save It!</button>
+    </form>
+
+    <h2>Saved Somethings</h2>
+    <% posts.forEach((post, index) => { %>
+        <div>
+            <h3>
+                <a href="/post/<%= index %>">
+                    <%= post.title %>
+                </a>
+            </h3>
+            <p>
+                <%= post.content %>
+            </p>
+            <div class="post-buttons">
+
+                <form action="/post/<%= index %>/edit" method="get">
+                    <button type="submit">Edit</button>
+                </form>
+                <form action="/post/<%= index %>/delete" method="post">
+                    <button type="submit">Delete</button>
+                </form>
+            </div>
+        </div>
+        <% }); %>
+
+            <footer>
+
+                <p>Copyright ©
+                    <%= new Date().getFullYear() %>
+                        Andy Lee Parker
+                </p>
+            </footer>
+</body>
+
+</html>

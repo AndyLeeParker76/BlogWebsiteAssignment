@@ -1,0 +1,73 @@
+body {
+    background-color: moccasin;
+    color: #82330c;
+    display: fixed;
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    justify-content: center;
+}
+
+.img1 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height: 200px;
+}
+
+h1 {
+    text-align: center;
+    color: maroon
+}
+
+h3 {
+    text-align: center;
+    color: maroon
+}
+
+button {
+    display: inline-block;
+    margin: 5px;
+    background-color: maroon;
+    color: white;
+    border: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: maroon;
+}
+
+a {
+    color: #82490c;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.post-buttons {
+    display: flex;
+    align-items: left;
+}
+
+.post-buttons form {
+    margin-left: 5px;
+}
+
+.post-buttons button {
+    margin-left: 5px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+}
